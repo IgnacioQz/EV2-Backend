@@ -4,6 +4,7 @@ from django.db import models
 
 class Producto(models.Model):
     nombreProducto  = models.CharField(max_length=100)
+    categoria       = models.CharField(max_length=50, null = True)
     precio          = models.FloatField()
     stock           = models.IntegerField()
     descripcion     = models.TextField()
