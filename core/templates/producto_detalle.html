@@ -4,6 +4,20 @@
 {% block title %}{{ producto.nombreProducto }} - ZUMEPROTH{% endblock title %}
 {% block style %} <link rel="stylesheet" href="{% static 'css/detalle.css' %}"> {% endblock style %}
 
+{% block specific_audio %}
+  {% if producto.nombreProducto == "The Elder Scrolls V: Skyrim" %}
+    <audio id="current-background-music" loop>
+        <source src="{% static 'music/Dragonborn.mp3' %}" type="audio/mpeg">
+    </audio>
+  {% elif producto.nombreProducto == "Devil May Cry 5" %}
+    <audio id="current-background-music" loop>
+        <source src="{% static 'music/BuryTheLight.mp3' %}" type="audio/mpeg">
+    </audio>
+  {% else %}
+    {{ block.super }}
+  {% endif %}
+{% endblock specific_audio %}
+
 {% block main %}
 
   <main>
