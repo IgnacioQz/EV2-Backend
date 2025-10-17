@@ -24,7 +24,3 @@ def categoria(request, categoria):
     context['productos'] = productos 
     context['categoria'] = categoria 
     return render(request, 'categoria.html', context)
-
-# Vista para la página de detalle del producto
-def detalleProducto(request):
-    return render(request, 'detalle.html')
