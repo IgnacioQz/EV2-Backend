@@ -1,0 +1,298 @@
+/* categoria.css - Estilos específicos para la página de categorías */
+
+/* Contenedor principal */
+.container.mt-4 {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    min-height: 80vh;
+}
+
+/* Sección del botón volver */
+.container.mt-4 .mb-3 {
+    margin-bottom: 1.5rem !important;
+}
+
+/* Botón "Volver a la página principal" */
+.container.mt-4 .btn-secondary {
+    background-color: #404040 !important;
+    border: 2px solid #404040 !important;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container.mt-4 .btn-secondary:hover {
+    background-color: #2d2d2d !important;
+    border-color: #2d2d2d !important;
+    transform: translateX(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Título de categoría */
+.container.mt-4 h2.mb-4 {
+    color: #1a1a1a;
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 2rem !important;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid #dc2626;
+    display: inline-block;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.container.mt-4 h2.mb-4::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 60%;
+    height: 4px;
+    background: #b91c1c;
+}
+
+/* Grid de productos */
+.container.mt-4 .row {
+    margin-top: 2rem;
+}
+
+/* Columnas de productos */
+.container.mt-4 .row .col-md-4.mb-4 {
+    margin-bottom: 2rem !important;
+}
+
+/* Cards de productos en categoría */
+.container.mt-4 .card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #ffffff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container.mt-4 .card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 15px 40px rgba(220, 38, 38, 0.25);
+}
+
+/* Imágenes en cards de categoría */
+.container.mt-4 .card .card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    background: #d1d5db;
+}
+
+.container.mt-4 .card:hover .card-img-top {
+    transform: scale(1.15);
+}
+
+/* Card body específico de categoría */
+.container.mt-4 .card .card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Título del producto en categoría */
+.container.mt-4 .card .card-title {
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    min-height: 2.5rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Descripción del producto */
+.container.mt-4 .card .card-text {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Precio del producto */
+.container.mt-4 .card .card-text strong {
+    color: #dc2626;
+    font-size: 1.5rem;
+    font-weight: 800;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+/* Botón "Ver Detalle" en categoría */
+.container.mt-4 .card .btn-outline-secondary {
+    background-color: transparent;
+    border: 2px solid #dc2626;
+    color: #dc2626;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    text-align: center;
+    margin-top: auto;
+}
+
+.container.mt-4 .card .btn-outline-secondary:hover {
+    background-color: #dc2626;
+    border-color: #dc2626;
+    color: #ffffff;
+    transform: scale(1.08);
+    box-shadow: 0 5px 15px rgba(220, 38, 38, 0.4);
+}
+
+/* Animación de entrada para las cards */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container.mt-4 .card {
+    animation: slideInUp 0.6s ease-out backwards;
+}
+
+/* Delay progresivo para cada card */
+.container.mt-4 .col-md-4:nth-child(1) .card { animation-delay: 0.1s; }
+.container.mt-4 .col-md-4:nth-child(2) .card { animation-delay: 0.2s; }
+.container.mt-4 .col-md-4:nth-child(3) .card { animation-delay: 0.3s; }
+.container.mt-4 .col-md-4:nth-child(4) .card { animation-delay: 0.4s; }
+.container.mt-4 .col-md-4:nth-child(5) .card { animation-delay: 0.5s; }
+.container.mt-4 .col-md-4:nth-child(6) .card { animation-delay: 0.6s; }
+.container.mt-4 .col-md-4:nth-child(7) .card { animation-delay: 0.7s; }
+.container.mt-4 .col-md-4:nth-child(8) .card { animation-delay: 0.8s; }
+.container.mt-4 .col-md-4:nth-child(9) .card { animation-delay: 0.9s; }
+
+/* Overlay en hover */
+.container.mt-4 .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(220, 38, 38, 0.08) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.container.mt-4 .card:hover::before {
+    opacity: 1;
+}
+
+/* Asegurar que el contenido esté sobre el overlay */
+.container.mt-4 .card > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Badge de categoría (opcional - si quieres agregar) */
+.category-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #dc2626;
+    color: #ffffff;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 3;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+}
+
+/* Estado vacío - cuando no hay productos */
+.container.mt-4 .row:empty::after {
+    content: 'No hay productos en esta categoría';
+    display: block;
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #6b7280;
+    font-size: 1.3rem;
+    background: #f9fafb;
+    border-radius: 10px;
+    margin: 2rem 0;
+}
+
+/* Responsive - Tablets */
+@media (max-width: 992px) {
+    .container.mt-4 h2.mb-4 {
+        font-size: 2rem;
+    }
+    
+    .container.mt-4 .card .card-img-top {
+        height: 220px;
+    }
+}
+
+/* Responsive - Móviles */
+@media (max-width: 768px) {
+    .container.mt-4 {
+        padding-top: 1.5rem;
+    }
+    
+    .container.mt-4 h2.mb-4 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .container.mt-4 .btn-secondary {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .container.mt-4 .card .card-img-top {
+        height: 200px;
+    }
+    
+    .container.mt-4 .card .card-title {
+        font-size: 1.1rem;
+        min-height: auto;
+    }
+    
+    .container.mt-4 .card .card-body {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container.mt-4 h2.mb-4 {
+        font-size: 1.5rem;
+    }
+    
+    .container.mt-4 .col-md-4 {
+        margin-bottom: 1.5rem !important;
+    }
+}
