@@ -11,10 +11,10 @@ def home(request):
     return render(request, 'home.html',context) 
 
 # Vista para el detalle de un producto específico
-def producto_detalle(request,id):
+def detalleProducto(request,id):
     context = {}
     productos = Producto.objects.get(id=id)    
-    context["productos"] = productos
+    context["producto"] = productos
     return render(request,"producto_detalle.html", context)
 
 # Vista para la página de categorías

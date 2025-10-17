@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Detalle Juego</title>
+{{ producto.nombreProducto }} - ZUMEPROTH
 {% endblock title %}
 
 {% block main %}
@@ -9,18 +9,31 @@
   <main>
     <section class="py-5 text-center container">
       <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">{{producto.nombreProducto}}</h1>
           <p>
-            <a href="{% url 'home' %}" class="btn btn-secondary my-2">Pagina Principal</a>
+            <a href="{% url 'home' %}" class="btn btn-secondary my-2">Página Principal</a>
           </p>
-          <img src="{{producto.imagen}}" />
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light">{{ producto.nombreProducto }}</h1>
+          <img src="{{ producto.imagen }}" class="img-fluid" alt="{{ producto.nombreProducto }}" />
         </div>
       </div>
     </section>
     <div class="album py-5 bg-body-tertiary">
       <div class="container">
-       {{producto.descripcion}}
+        <div class="row">
+          <div class="col-12">
+            <h3>Descripción</h3>
+            <p>{{ producto.descripcion }}</p>
+            
+            {% if producto.categoria %}
+            <p><strong>Categoría:</strong> {{ producto.categoria }}</p>
+            {% endif %}
+            
+            {% if producto.precio %}
+            <p><strong>Precio:</strong> ${{ producto.precio }}</p>
+            {% endif %}
+          </div>
+        </div>
       </div>
     </div>
   </main>
