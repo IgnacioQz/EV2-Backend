@@ -1,11 +1,36 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    <title>Categoria Producto</title>
-{% endblock %}
-
-{% block style %}
+<title>{{ categoria }} - ZUMEPROTH</title>
 {% endblock %}
 
 {% block main %}
+<div class="container mt-4">
+    <!-- Botón para volver a la página principal -->
+    <div class="mb-3">
+        <a href="{% url 'home' %}" class="btn btn-secondary">
+            ← Volver a la página principal
+        </a>
+    </div>
+
+    <h2 class="mb-4">Juegos de: {{ categoria }}</h2>
+
+    <div class="row">
+        {% for producto in productos %}
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <img src="{{ producto.imagen }}" class="card-img-top" alt="{{ producto.nombre }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ producto.nombreProducto }}</h5>
+                    <p class="card-text">{{ producto.descripcion }}</p>
+                    <p class="card-text"><strong>${{ producto.precio }}</strong></p>
+                    <a href="{% url 'producto_detalle' producto.id %}" type="button" class="btn btn-sm btn-outline-secondary">
+                      Ver Detalle
+                    </a>                
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

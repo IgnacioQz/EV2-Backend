@@ -17,14 +17,13 @@ def producto_detalle(request,id):
     context["productos"] = productos
     return render(request,"producto_detalle.html", context)
 
-# función de contexto para proporcionar categorías a todas las plantillas
-def categorias_context(request):
-    categorias = Producto.objects.values_list('categoria', flat=True).distinct()
-    return {'categorias': categorias}
-
 # Vista para la página de categorías
-def categoria(request):
-    return render(request, 'categoria.html')
+def categoria(request, categoria):
+    context = {}
+    productos = Producto.objects.filter(categoria=categoria) 
+    context['productos'] = productos 
+    context['categoria'] = categoria 
+    return render(request, 'categoria.html', context)
 
 # Vista para la página de detalle del producto
 def detalleProducto(request):

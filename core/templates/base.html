@@ -36,10 +36,16 @@
         <div class="offcanvas-body">
             <ul class="list-group">
                 {% for categoria in categorias %}
-                <li class="list-group-item">{{ categoria }}</li>
-            {% endfor %}
-    </ul>
-</div>
+                <li class="list-group-item">
+                    <a href="{% url 'categoria' categoria %}" class="text-decoration-none">
+                        {{ categoria }}
+                    </a>
+                </li>
+                {% empty %}
+                <li class="list-group-item">No hay categorías disponibles</li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 
     {% block main %}{% endblock %}
