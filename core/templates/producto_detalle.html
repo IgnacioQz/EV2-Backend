@@ -25,13 +25,10 @@
             <h3>Descripción</h3>
             <p>{{ producto.descripcion }}</p>
             
-            {% if producto.categoria %}
             <p><strong>Categoría:</strong> {{ producto.categoria }}</p>
-            {% endif %}
-            
-            {% if producto.precio %}
+            <p><strong>Stock disponible:</strong> {{ producto.stock }}</p>
             <p><strong>Precio:</strong> ${{ producto.precio }}</p>
-            {% endif %}
+
           </div>
         </div>
       </div>
