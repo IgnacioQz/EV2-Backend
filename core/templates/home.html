@@ -22,12 +22,12 @@
           {% for producto in productos %}
           <div class="col">
             <div class="card shadow-sm">
-              <img src={{producto.image}} alt="No hay foto"/> 
+              <img src={{producto.imagen}} alt="No hay foto"/> 
               <div class="card-body">
                 <h5 class="card-title">{{producto.nombreProducto}}</h5>
                 <p class="small mb-0"><i class="far fa-star fa-lg"></i>Precio:$ <strong>{{producto.precio}}</strong></p>
                 <p class="card-text text-truncate">
-                  {{producto.categoria}}
+                  Categoria:<strong>{{producto.categoria}}</strong>
                 </p>
                 <div
                   class="d-flex justify-content-between align-items-center"
@@ -37,7 +37,7 @@
                       type="button"
                       class="btn btn-sm btn-outline-secondary"
                     >
-                      Ver
+                      Ver Detalle
                   </a>
                   </div>
                 </div>
