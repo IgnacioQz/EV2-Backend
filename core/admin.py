@@ -4,6 +4,6 @@ from .models import Producto
 # Register your models here.
 
 class ProductoAdmin(admin.ModelAdmin):
-    list_display = ('nombreProducto','categoria', 'precio', 'stock', 'descripcion', 'imagen')
+    list_display = ('nombreProducto','categoria', 'precio', 'stock', 'descripcion')
 
 admin.site.register(Producto, ProductoAdmin)
