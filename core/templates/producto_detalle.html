@@ -25,10 +25,10 @@
             <h3>Descripción</h3>
             <p>{{ producto.descripcion }}</p>
             
-            <p><strong>Categoría:</strong> {{ producto.categoria }}</p>
+            <p>Categoría: <a href="{% url 'categoria' producto.categoria %}"><strong>{{producto.categoria}}</strong></a></p>
             <p><strong>Stock disponible:</strong> {{ producto.stock }}</p>
-            <p><strong>Precio:</strong> ${{ producto.precio }}</p>
-
+            <p><strong>Precio:$ {{ producto.precio }}</strong></p>
+            
           </div>
         </div>
       </div>

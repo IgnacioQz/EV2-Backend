@@ -1,107 +1,76 @@
-/* Paleta de colores ZUMEPROTH */
+/* Paleta de colores CM Punk */
 :root {
-    --negro-principal: #1a1a1a;
-    --negro-secundario: #2d2d2d;
-    --rojo-principal: #dc2626;
-    --rojo-hover: #b91c1c;
-    --gris-oscuro: #404040;
-    --gris-medio: #6b7280;
-    --gris-claro: #d1d5db;
+    --negro: #000000;
+    --celeste: #00bfff;
+    --rojo: #ff0000;
     --blanco: #ffffff;
-    --blanco-suave: #f9fafb;
+    --gris-oscuro: #1a1a1a;
 }
 
-/* Estilos generales */
+/* Body */
 body {
-    background-color: var(--gris-claro);
-    color: var(--negro-principal);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--blanco);
+    color: var(--negro);
     margin: 0;
     padding: 0;
 }
 
-/* Navbar personalizado */
+/* Navbar */
 .navbar {
-    background-color: var(--negro-principal) !important;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--negro) !important;
     padding: 1rem 0;
 }
 
 .navbar-brand {
-    color: var(--rojo-principal) !important;
+    color: var(--celeste) !important;
     font-weight: bold;
     font-size: 1.8rem;
-    letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .navbar-brand:hover {
-    color: var(--rojo-hover) !important;
+    color: var(--rojo) !important;
 }
 
-.nav-link {
-    color: var(--blanco) !important;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--rojo-principal) !important;
-}
-
-/* Botón de categorías */
+/* Botón Categorías */
 .btn-primary {
-    background-color: var(--rojo-principal) !important;
-    border-color: var(--rojo-principal) !important;
+    background-color: var(--celeste) !important;
+    border-color: var(--celeste) !important;
+    color: var(--negro) !important;
     font-weight: 600;
-    transition: all 0.3s ease;
 }
 
 .btn-primary:hover {
-    background-color: var(--rojo-hover) !important;
-    border-color: var(--rojo-hover) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
+    background-color: var(--rojo) !important;
+    border-color: var(--rojo) !important;
+    color: var(--blanco) !important;
 }
 
 /* Buscador */
-.form-control {
-    border: 2px solid var(--gris-medio);
-    border-radius: 5px;
-    transition: border-color 0.3s ease;
-}
-
-.form-control:focus {
-    border-color: var(--rojo-principal);
-    box-shadow: 0 0 0 0.2rem rgba(220, 38, 38, 0.25);
-}
-
 .btn-outline-success {
-    color: var(--rojo-principal) !important;
-    border-color: var(--rojo-principal) !important;
-    font-weight: 600;
+    color: var(--celeste) !important;
+    border-color: var(--celeste) !important;
 }
 
 .btn-outline-success:hover {
-    background-color: var(--rojo-principal) !important;
-    border-color: var(--rojo-principal) !important;
-    color: var(--blanco) !important;
+    background-color: var(--celeste) !important;
+    border-color: var(--celeste) !important;
+    color: var(--negro) !important;
 }
 
 /* Offcanvas */
 .offcanvas {
-    background-color: var(--negro-secundario);
+    background-color: var(--gris-oscuro);
 }
 
 .offcanvas-header {
-    background-color: var(--negro-principal);
-    border-bottom: 3px solid var(--rojo-principal);
+    background-color: var(--negro);
+    border-bottom: 3px solid var(--celeste);
 }
 
 .offcanvas-title {
     color: var(--blanco);
     font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .btn-close {
@@ -110,143 +79,45 @@ body {
 
 /* Lista de categorías */
 .list-group-item {
-    background-color: var(--negro-secundario) !important;
-    border: 1px solid var(--gris-oscuro) !important;
-    transition: all 0.3s ease;
+    background-color: var(--gris-oscuro) !important;
+    border: 1px solid var(--celeste) !important;
 }
 
 .list-group-item a {
     color: var(--blanco) !important;
-    display: block;
-    padding: 0.75rem 1rem;
-    text-decoration: none;
     font-weight: 500;
 }
 
 .list-group-item:hover {
-    background-color: var(--gris-oscuro) !important;
-    border-left: 4px solid var(--rojo-principal) !important;
-    transform: translateX(5px);
+    background-color: var(--negro) !important;
+    border-left: 4px solid var(--rojo) !important;
 }
 
-/* Cards de productos */
+/* Cards */
 .card {
     background-color: var(--blanco);
-    border: 1px solid var(--gris-claro);
+    border: 2px solid var(--celeste);
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    border-color: var(--rojo-principal);
-}
-
-.card-img-top {
-    height: 250px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.card:hover .card-img-top {
-    transform: scale(1.05);
+    border-color: var(--rojo);
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
 }
 
 .card-title {
-    color: var(--negro-principal);
+    color: var(--negro);
     font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.card-text {
-    color: var(--gris-medio);
-}
-
-.card-body .btn-primary {
-    width: 100%;
-    margin-top: 10px;
 }
 
 /* Botón secundario */
 .btn-secondary {
     background-color: var(--gris-oscuro) !important;
     border-color: var(--gris-oscuro) !important;
-    transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-    background-color: var(--negro-secundario) !important;
-    border-color: var(--negro-secundario) !important;
-}
-
-/* Secciones */
-section {
-    padding: 3rem 0;
-}
-
-.text-center h1, .text-center h2 {
-    color: var(--negro-principal);
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-/* Album/Grid de productos */
-.album {
-    background-color: var(--blanco-suave);
-    min-height: 60vh;
-}
-
-/* Alerts */
-.alert-info {
-    background-color: var(--gris-claro);
-    border-color: var(--gris-medio);
-    color: var(--negro-principal);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .navbar-brand {
-        font-size: 1.4rem;
-    }
-    
-    .card-img-top {
-        height: 200px;
-    }
-}
-
-/* Animaciones */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.card {
-    animation: fadeIn 0.5s ease-out;
-}
-
-/* Scrollbar personalizado */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: var(--gris-claro);
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--gris-oscuro);
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--rojo-principal);
+    background-color: var(--celeste) !important;
+    border-color: var(--celeste) !important;
+    color: var(--negro) !important;
 }
